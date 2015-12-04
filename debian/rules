@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE=1
+
+%:
+	dh $@ --with python2
+
+override_dh_auto_install:
+	dh_auto_install
+	# Remove files installed by setuptools in the wrong places.
+	# They are installed by appropriate dh helpers then.
+	rm -rf debian/jube/usr/platform debian/jube/usr/examples debian/jube/usr/schema debian/jube/usr/docu debian/jube/usr/LICENSE debian/jube/usr/RELEASE_NOTES
+
+override_dh_installchangelogs:
+	dh_installchangelogs RELEASE_NOTES upstream

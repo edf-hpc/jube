@@ -1,0 +1,23 @@
+Source: jube
+Section: net
+Priority: optional
+Maintainer: Rémi Palancher <remi-externe.palancher@edf.fr>
+Homepage: http://www.fz-juelich.de/ias/jsc/EN/Expertise/Support/Software/JUBE/_node.html
+Build-Depends:
+ debhelper (>= 8),
+ python-all (>= 2.6.6-3~),
+ python-setuptools,
+ dh-python
+X-Python-Version: >= 2.6
+Standards-Version: 3.9.6
+
+Package: jube
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${python:Depends}
+Description: HPC benchmarking environment
+ The JUBE benchmarking environment provides a script based framework to easily
+ create benchmark sets, run those sets on different computer systems and
+ evaluate the results.
+
