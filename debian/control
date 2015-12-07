@@ -6,10 +6,9 @@ Homepage: http://www.fz-juelich.de/ias/jsc/EN/Expertise/Support/Software/JUBE/_n
 Build-Depends:
  debhelper (>= 8),
  python-all (>= 2.6.6-3~),
- python-setuptools,
- dh-python
+ python-setuptools
 X-Python-Version: >= 2.6
-Standards-Version: 3.9.6
+Standards-Version: 3.9.1
 
 Package: jube
 Architecture: all
