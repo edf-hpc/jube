@@ -13,3 +13,9 @@ override_dh_auto_install:
 
 override_dh_installchangelogs:
 	dh_installchangelogs RELEASE_NOTES upstream
+
+debian/jube.1:
+	help2man --no-discard-stderr --no-info --version-string="jube 2.1.0" \
+	         --name="JUBE provides a script based framework to easily create benchmark sets, run those sets on different computer systems and evaluate the results." \
+	         --include=debian/help2man.include jube \
+	         --output=$@

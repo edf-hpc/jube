@@ -1,0 +1,6 @@
+Manpages
+--------
+
+To update manpage run:
+
+$ make -f debian/rules debian/jube.1
